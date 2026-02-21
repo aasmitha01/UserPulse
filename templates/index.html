@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Insurance Fraud Detection</title>
+    <style>
+        body{
+            font-family: Arial;
+            background:#f2f2f2;
+            text-align:center;
+        }
+        .box{
+            background:white;
+            padding:30px;
+            margin:50px auto;
+            width:400px;
+            border-radius:10px;
+            box-shadow:0 0 10px gray;
+        }
+        input{
+            width:90%;
+            padding:10px;
+            margin:5px;
+        }
+        button{
+            padding:10px 20px;
+            background:#007BFF;
+            color:white;
+            border:none;
+            border-radius:5px;
+            cursor:pointer;
+        }
+        h2{
+            color:#333;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="box">
+    <h2>Insurance Fraud Detection</h2>
+
+    <form action="/predict" method="post">
+
+        <!-- SAMPLE INPUTS (must match model feature count later) -->
+        <input type="text" name="f1" placeholder="Feature 1" required>
+        <input type="text" name="f2" placeholder="Feature 2" required>
+        <input type="text" name="f3" placeholder="Feature 3" required>
+        <input type="text" name="f4" placeholder="Feature 4" required>
+        <input type="text" name="f5" placeholder="Feature 5" required>
+
+        <br><br>
+        <button type="submit">Predict</button>
+    </form>
+
+    <h3>{{ prediction_text }}</h3>
+
+</div>
+
+</body>
+</html>

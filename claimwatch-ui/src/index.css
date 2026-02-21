@@ -1,0 +1,81 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ROOT SETTINGS */
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color: white;
+  background-color: #020617;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* BODY FULL SCREEN */
+body {
+  width: 100%;
+  height: 100vh;
+  background: #020617;
+}
+
+/* ROOT FULL WIDTH */
+#root {
+  width: 100%;
+  height: 100vh;
+}
+
+/* LINKS */
+a {
+  color: #8b5cf6;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #a78bfa;
+}
+
+/* BUTTON BASE STYLE */
+button {
+  border-radius: 8px;
+  border: none;
+  padding: 10px 16px;
+  font-size: 14px;
+  background: linear-gradient(90deg,#6366f1,#9333ea);
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+.loader {
+  width: 60px;
+  height: 60px;
+  border: 6px solid #1e293b;
+  border-top: 6px solid #8b5cf6;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+@keyframes pulseGlow {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.05);
+  }
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
